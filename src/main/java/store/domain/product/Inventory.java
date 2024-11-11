@@ -17,7 +17,7 @@ public class Inventory {
         List<Product> matchedItems = new ArrayList<>();
         for (SelectedProduct selectedProduct : selectedProducts) {
             for (Product product : products) {
-                if (product.getName().equals(selectedProduct.getItemName())) {
+                if (product.getName().equals(selectedProduct.getProductName())) {
                     matchedItems.add(product);
                 }
             }
@@ -25,7 +25,7 @@ public class Inventory {
         return matchedItems;
     }
 
-    public List<Product> getAllItems() {
+    public List<Product> getAllProducts() {
         return Collections.unmodifiableList(products);
     }
 }
