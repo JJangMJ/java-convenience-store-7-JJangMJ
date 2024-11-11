@@ -12,5 +12,7 @@ public class Customer {
 
     public Receipt purchase(List<SelectedProduct> selectedProducts, Inventory inventory, Cashier cashier) {
         List<Product> matchedProducts = inventory.matchItems(selectedProducts);
+        receipt = cashier.checkOut(selectedProducts, matchedProducts);
+        return receipt;
     }
 }
