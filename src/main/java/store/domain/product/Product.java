@@ -13,7 +13,7 @@ public class Product {
         this.promotionName = promotionName;
     }
 
-    public boolean isSameItem(String itemName, int quantity, String promotionName) {
+    public boolean isSameProduct(String itemName, int quantity, String promotionName) {
         return this.name.equals(itemName) && quantity <= this.quantity && this.promotionName.equals(promotionName);
     }
 
