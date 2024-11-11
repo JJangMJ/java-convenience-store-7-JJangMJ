@@ -1,8 +1,10 @@
 package store.controller;
 
 import java.io.IOException;
+import java.util.List;
 import store.domain.Inventory;
 import store.domain.Receipt;
+import store.domain.SelectedProduct;
 import store.file.ProductFileReader;
 import store.view.InputView;
 import store.view.OutputView;
@@ -32,7 +34,9 @@ public class Store {
     }
 
     private Receipt purchaseProcess() {
-        return null;
+        while (true) {
+            List<SelectedProduct> selectedProducts = inputView.readSelectedProducts();
+        }
     }
 
     private Inventory loadProducts() {
