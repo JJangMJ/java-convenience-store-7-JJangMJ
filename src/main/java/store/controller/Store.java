@@ -2,6 +2,7 @@ package store.controller;
 
 import java.io.IOException;
 import java.util.List;
+import store.domain.discount.Promotions;
 import store.domain.transaction.Cashier;
 import store.domain.user.Customer;
 import store.domain.product.Inventory;
@@ -15,6 +16,7 @@ public class Store {
     private final InputView inputView;
     private final OutputView outputView;
     private final Inventory inventory;
+    private final Promotions promotions;
     private final Customer customer;
     private final Cashier cashier;
 
@@ -61,6 +63,6 @@ public class Store {
     }
 
     private void showProducts() {
-        outputView.printAllProducts(inventory.getProducts());
+        outputView.printAllProducts(inventory.getAllProducts());
     }
 }

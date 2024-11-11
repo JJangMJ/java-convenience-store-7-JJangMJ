@@ -26,13 +26,13 @@ public class Promotion {
         int freeQuantity = this.getPromotionType().getFreeQuantity();
         int setSize = requiredQuantity + freeQuantity;
 
-        int applicablePromotionSets = item.getProductQuantity() / setSize;
-        int remainingQuantity = item.getProductQuantity() % setSize;
+        int applicablePromotionSets = item.getQuantity() / setSize;
+        int remainingQuantity = item.getQuantity() % setSize;
 
-        int discount = applicablePromotionSets * freeQuantity * item.getProductPrice();
+        int discount = applicablePromotionSets * freeQuantity * item.getPrice();
 
         if (remainingQuantity >= requiredQuantity) {
-            boolean addFreeItems = inputView.askToAddFreeItems(item.getProductName(), freeQuantity);
+            boolean addFreeItems = inputView.askToAddFreeItems(item.getItemName(), freeQuantity);
             if (addFreeItems) {
                 item.addQuantity(freeQuantity);
                 discount += freeQuantity * item.getPrice();
