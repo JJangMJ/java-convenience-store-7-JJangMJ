@@ -9,21 +9,21 @@ import java.util.List;
 import store.domain.Product;
 
 public class ProductFileReader {
-    private static final String ITEM_FILE_PATH = "src/main/resources/products.md";
+    private static final String PRODUCT_FILE_PATH = "src/main/resources/products.md";
 
-    public List<Product> readAllItems() throws IOException {
-        List<Product> items = new ArrayList<>();
-        try (BufferedReader br = Files.newBufferedReader(Paths.get(ITEM_FILE_PATH))) {
+    public List<Product> readAllProducts() throws IOException {
+        List<Product> products = new ArrayList<>();
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(PRODUCT_FILE_PATH))) {
             br.readLine(); // 헤더 스킵
             int lineNumber = 2; // 헤더를 제외한 첫 번째 라인의 번호
 
             String line;
             while ((line = br.readLine()) != null) {
-                items.add(parseProductLine(line, lineNumber));
+                products.add(parseProductLine(line, lineNumber));
                 lineNumber++;
             }
         }
-        return items;
+        return products;
     }
 
     private Product parseProductLine(String line, int lineNumber) {

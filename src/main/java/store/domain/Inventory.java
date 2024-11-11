@@ -9,7 +9,7 @@ public class Inventory {
     private final List<Product> products;
 
     public Inventory(ProductFileReader reader) throws IOException {
-        this.products = reader.readAllItems();
+        this.products = reader.readAllProducts();
     }
 
     public List<Product> getProducts() {
