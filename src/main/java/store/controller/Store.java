@@ -2,6 +2,8 @@ package store.controller;
 
 import java.io.IOException;
 import java.util.List;
+import store.domain.Cashier;
+import store.domain.Customer;
 import store.domain.Inventory;
 import store.domain.Receipt;
 import store.domain.SelectedProduct;
@@ -13,11 +15,15 @@ public class Store {
     private final InputView inputView;
     private final OutputView outputView;
     private final Inventory inventory;
+    private final Customer customer;
+    private final Cashier cashier;
 
     public Store() {
         this.inputView = new InputView();
         this.outputView = new OutputView();
         this.inventory = loadProducts();
+        this.customer = new Customer();
+        this.cashier = new Cashier();
     }
 
     public void run() {
@@ -36,6 +42,7 @@ public class Store {
     private Receipt purchaseProcess() {
         while (true) {
             List<SelectedProduct> selectedProducts = inputView.readSelectedProducts();
+            customer.purchase(selectedProducts, inventory, cashier);
         }
     }
 
