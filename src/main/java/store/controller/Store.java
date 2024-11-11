@@ -2,6 +2,7 @@ package store.controller;
 
 import java.io.IOException;
 import store.domain.Inventory;
+import store.domain.Receipt;
 import store.file.ProductFileReader;
 import store.view.InputView;
 import store.view.OutputView;
@@ -23,10 +24,15 @@ public class Store {
             try {
                 printWelcomeGreeting();
                 showProducts();
+                purchaseProcess();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    private Receipt purchaseProcess() {
+        return null;
     }
 
     private Inventory loadProducts() {
