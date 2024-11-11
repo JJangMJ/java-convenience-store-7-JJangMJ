@@ -1,6 +1,7 @@
 package store.domain;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import store.file.ProductFileReader;
 
@@ -9,5 +10,9 @@ public class Inventory {
 
     public Inventory(ProductFileReader reader) throws IOException {
         this.products = reader.readAllItems();
+    }
+
+    public List<Product> getProducts() {
+        return Collections.unmodifiableList(products);
     }
 }
