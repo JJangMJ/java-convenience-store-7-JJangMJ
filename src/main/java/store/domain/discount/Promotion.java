@@ -1,6 +1,7 @@
-package store.domain;
+package store.domain.discount;
 
 import java.time.LocalDate;
+import store.domain.receipt.ReceiptItem;
 import store.view.InputView;
 
 public class Promotion {

@@ -1,4 +1,4 @@
-package store.domain;
+package store.domain.discount;
 
 public enum PromotionType {
     BUY_ONE_GET_ONE("1+1", 1, 1),

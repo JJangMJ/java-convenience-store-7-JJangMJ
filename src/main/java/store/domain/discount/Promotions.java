@@ -1,4 +1,4 @@
-package store.domain;
+package store.domain.discount;
 
 import java.time.LocalDate;
 import java.util.HashMap;

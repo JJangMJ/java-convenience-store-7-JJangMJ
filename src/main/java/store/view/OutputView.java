@@ -1,7 +1,7 @@
 package store.view;
 
 import java.util.List;
-import store.domain.Product;
+import store.domain.product.Product;
 
 public class OutputView {
 

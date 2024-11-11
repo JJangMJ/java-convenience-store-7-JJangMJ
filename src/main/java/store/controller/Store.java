@@ -2,11 +2,11 @@ package store.controller;
 
 import java.io.IOException;
 import java.util.List;
-import store.domain.Cashier;
-import store.domain.Customer;
-import store.domain.Inventory;
-import store.domain.Receipt;
-import store.domain.SelectedProduct;
+import store.domain.transaction.Cashier;
+import store.domain.user.Customer;
+import store.domain.product.Inventory;
+import store.domain.receipt.Receipt;
+import store.domain.product.SelectedProduct;
 import store.file.ProductFileReader;
 import store.view.InputView;
 import store.view.OutputView;

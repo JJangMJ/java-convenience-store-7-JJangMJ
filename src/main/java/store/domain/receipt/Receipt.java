@@ -1,4 +1,4 @@
-package store.domain;
+package store.domain.receipt;
 
 import java.util.List;
 

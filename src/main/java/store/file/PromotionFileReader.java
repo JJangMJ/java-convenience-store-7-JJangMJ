@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import store.domain.Promotion;
-import store.domain.PromotionType;
+import store.domain.discount.Promotion;
+import store.domain.discount.PromotionType;
 
 public class PromotionFileReader {
     private static final String PROMOTION_FILE_PATH = "src/main/resources/promotions.md";

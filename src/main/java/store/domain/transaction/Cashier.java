@@ -1,6 +1,7 @@
-package store.domain;
+package store.domain.transaction;
 
 import java.util.List;
+import store.domain.product.Product;
 import store.view.InputView;
 
 public class Cashier {

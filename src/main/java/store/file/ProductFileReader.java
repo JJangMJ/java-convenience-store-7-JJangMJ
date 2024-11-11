@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import store.domain.Product;
+import store.domain.product.Product;
 
 public class ProductFileReader {
     private static final String PRODUCT_FILE_PATH = "src/main/resources/products.md";

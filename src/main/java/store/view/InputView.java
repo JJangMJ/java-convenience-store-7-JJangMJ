@@ -4,7 +4,7 @@ package store.view;
 import camp.nextstep.edu.missionutils.Console;
 import java.util.ArrayList;
 import java.util.List;
-import store.domain.SelectedProduct;
+import store.domain.product.SelectedProduct;
 
 public class InputView {
 

@@ -1,4 +1,4 @@
-package store.domain;
+package store.domain.product;
 
 import java.io.IOException;
 import java.util.Collections;
